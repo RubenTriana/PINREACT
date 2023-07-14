@@ -17,14 +17,18 @@
   .navbar-menu li {
     list-style-type: none;
     margin: 0 1rem;
+    color:white;
+    font-weight: 600;
     
   }
-  
+
   .navbar-menu li a {
+    color: white;
     text-decoration: none;
-    color:white;
+    
   }
-  .navbar-menu li a:hover {
+ 
+  .navbar-menu li:hover {
     text-decoration: underline;
     color: #19ab19;
   }
