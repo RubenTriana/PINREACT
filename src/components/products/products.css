@@ -1,0 +1,24 @@
+.bg-colors {
+  background: linear-gradient(to right, #434242 70%, #24272a 30%);
+}
+
+.bg-slider-prod {
+  background-color: #19ab19;
+  opacity: 0.90;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+h2 {
+  color: white;
+}
+
+@media (min-width: 550px) {
+  .carousel-inner .position-absolute {
+    width: 50% !important;
+  }
+}

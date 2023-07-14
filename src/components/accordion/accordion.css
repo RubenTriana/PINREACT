@@ -1,0 +1,24 @@
+.background-section {
+    background-image: url('../../assets/270108148_n.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    min-height: 100vh;
+}
+
+.accordion {
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-bg: #eceaea;
+    --bs-accordion-active-color: white;
+    --bs-accordion-active-bg: #19ab19;
+}
+
+.accordion-button {
+    font-weight: 600;
+}
+
+@media screen and (max-width: 550px) {
+    .background-section {
+        background-size: cover;
+    }
+}

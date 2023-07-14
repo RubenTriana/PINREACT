@@ -1,0 +1,27 @@
+.carousel-control-prev {
+    display:none;
+}
+
+.carousel-control-next {
+    display: none;
+}
+
+.carousel .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+
+}
+
+@media screen and (max-width: 550px) {
+    .carousel-top {
+        padding-top: 14vh;
+    }
+
+    .carousel .carousel-indicators {
+        display:none;
+    }
+    h1 {
+        font-size:30px!important;
+    }
+}

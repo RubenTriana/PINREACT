@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: 'Roboto', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black !important;
+}
+
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px!important;
+  font-weight: 600!important;
+
+}
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 39px!important;
+  font-weight: 600!important;
+}
+
+
+
+p {
+  font-family: 'Roboto', sans-serif;
+  color:white;
+}
+
+.subtittle-title {
+  color:#19ab19;
+}
+
+.btnnv {
+  border: 1px solid #19ab19;
+  border-radius: 25px;
+  color:white;
+  background-color: #19ab19;
+  transition: 1s;
+  padding:5px 20px;
+}
+.btnnv:hover {
+  border: 1px solid #c6caca;
+  background-color: #128812
+}
