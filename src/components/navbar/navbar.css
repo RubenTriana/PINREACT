@@ -23,14 +23,14 @@
   }
 
   .navbar-menu li a {
-    color: white;
+    color: white !important;
     text-decoration: none;
     
   }
  
-  .navbar-menu li:hover {
-    text-decoration: underline;
-    color: #19ab19;
+  .navbar-menu li a:hover {
+    text-decoration: underline !important;
+    color: #19ab19 !important;
   }
   
   .hamburger {
