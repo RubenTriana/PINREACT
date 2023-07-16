@@ -27,7 +27,10 @@
 }
 
 .error{
-    color: #19ab19;
+    color: red;
+    position: absolute;
+    font-size: 1rem;
+    
     
 }
 
