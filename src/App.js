@@ -2,11 +2,12 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/navbar/navbar';
 import Slider from './components/banner/slider';
-import About from './components/about/about'
-import Products from './components/products/products'
-import Accordion from './components/accordion/accordion'
+import About from './components/about/about';
+import Products from './components/products/products';
+import Accordion from './components/accordion/accordion';
+import Form2 from './components/form/form2';
 import Footer from './components/footer/footer';
-import { Form2 } from './components/form/form2';
+
 
 
 
