@@ -34,25 +34,25 @@ function Form2() {
             <div className="mb-2">
               <label htmlFor="nombre" className="form-label">Nombre</label>
               <input type="text" className=" form-control shadow-none  " id="nombre" autoComplete="off" {...register("nombre", { required: true, pattern: /^[A-Za-z]+$/i })} />
-              {errors.nombre && <p className="error">⚠️ El nombre es obligatorio</p>}
-              {errors.nombre?.type === "pattern" && <p className="error">No se permite números en el nombre</p>}
+              {errors.nombre && <p className="error">❎ El nombre es obligatorio</p>}
+              {errors.nombre?.type === "pattern" && <p className="error">❎ No se permite números en el nombre</p>}
             </div>
             <div className="mb-2">
               <label htmlFor="correo" className="form-label">Correo</label>
               <input type="email" className="form-control shadow-none" id="correo" autoComplete="off" {...register("correo", { required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i })} />
-              {errors.correo && <p className="error">⚠️ El correo es obligatorio</p>}
-              {errors.correo && errors.correo.type === "pattern" && <p className="error">El correo electrónico no es válido</p>}
+              {errors.correo && <p className="error">❎ El correo es obligatorio</p>}
+              {errors.correo && errors.correo.type === "pattern" && <p className="error">❎ El correo electrónico no es válido</p>}
             </div>
             <div className="mb-2">
               <label htmlFor="telefono" className="form-label">Teléfono</label>
               <input type="tel" className="form-control shadow-none" id="telefono" autoComplete="off"  {...register("telefono", { required: true, pattern: /^[0-9]+$/ })} />
-              {errors.telefono?.type === "required" && <p className="error">⚠️ El teléfono es obligatorio</p>}
-              {errors.telefono?.type === "pattern" && <p className="error">El teléfono debe contener números</p>}
+              {errors.telefono?.type === "required" && <p className="error">❎ El teléfono es obligatorio</p>}
+              {errors.telefono?.type === "pattern" && <p className="error">❎ El teléfono debe contener números</p>}
             </div>
             <div className="mb-2">
               <label htmlFor="mensaje" className="form-label">Comentario</label>
               <textarea type="text" className="form-control shadow-none" id="mensaje" rows={2} autoComplete="off" {...register("mensaje", { required: true} )}/>
-              {errors.mensaje?.type === "required" && <p className="error">⚠️ El mensaje es obligatorio</p>}
+              {errors.mensaje?.type === "required" && <p className="error">❎ El mensaje es obligatorio</p>}
             </div>
             <button type="submit" className="custom-button">Registro</button>
           </form>
