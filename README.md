@@ -1,29 +1,23 @@
 # **Proyecto Integrador - FULLSTACK**
 ---
-# Introduction
+# Introducción
 
-The objective of this application is to display a One page in ReactJ. 
+Este repositorio contiene el código para un landing en ReactJS. 
 
-&nbsp;
-
-# Demo 
-
-landing
 
 &nbsp;
 
-# technologies used 🛠️
+# Tecnologías usadas 🛠️
 
 - HTML5, CSS, Javascript.
 - ReactJs
 - Bootstrap
 - React Bootstrap
+- React Scroll
+- React Hook Form
+- AXIOS
 
-# Instructions 🚀 
 
-1. 
-2.
-3.
 
 &nbsp;
 
