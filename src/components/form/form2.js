@@ -11,13 +11,15 @@ function Form2() {
   /*conexión a base de datos*/
   const onSubmit = (data) => {
     // console.log(data);
-    axios.post('https://back-app-production.up.railway.app/api/registrapersona', data)
+    axios.post('https://cors-anywhere.herokuapp.com/https://back-app-production.up.railway.app/api/registrapersona', data)
       .then((response) => {
         console.log(response);
+        alert('Registro exitoso');
         reset();
       })
       .catch((error) => {
         console.log(error);
+        alert('Ocurrió un error al enviar el formulario');
       });
   };
 
@@ -36,19 +38,19 @@ function Form2() {
             </div>
             <div className="mb-2">
               <label htmlFor="correo" className="form-label">Correo</label>
-              <input type="email" className="form-control shadow-none" id="correo" autoComplete="off" {...register("correo", { required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i})} />
+              <input type="email" className="form-control shadow-none" id="correo" autoComplete="off" {...register("correo", { required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i })} />
               {errors.correo && <p className="error">El correo es obligatorio</p>}
               {errors.correo && errors.correo.type === "pattern" && <p className="error">El correo electrónico no es válido</p>}
             </div>
             <div className="mb-2">
               <label htmlFor="telefono" className="form-label">Teléfono</label>
-              <input type="tel" className="form-control shadow-none" id="telefono" autoComplete="off"  {...register("telefono", { required: true, pattern: /^[0-9]+$/  })} />
+              <input type="tel" className="form-control shadow-none" id="telefono" autoComplete="off"  {...register("telefono", { required: true, pattern: /^[0-9]+$/ })} />
               {errors.telefono?.type === "required" && <p className="error">El teléfono es obligatorio</p>}
               {errors.telefono?.type === "pattern" && <p className="error">El teléfono debe contener números</p>}
             </div>
             <div className="mb-2">
               <label htmlFor="mensaje" className="form-label">Comentario</label>
-              <textarea type="text" className="form-control shadow-none" id="mensaje" rows={2} autoComplete="off" {...register("mensaje")} />
+              <textarea type="text" className="form-control shadow-none" id="mensaje" rows={2} autoComplete="off" {...register("mensaje" )}/>
             </div>
             <button type="submit" className="custom-button" disabled={Object.keys(errors).length > 0}>Registro</button>
           </form>
