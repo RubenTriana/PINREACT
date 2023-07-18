@@ -51,8 +51,7 @@ function Form2() {
             </div>
             <div className="mb-2">
               <label htmlFor="mensaje" className="form-label">Comentario</label>
-              <textarea type="text" className="form-control shadow-none" id="mensaje" rows={2} autoComplete="off" {...register("mensaje", { required: true} )}/>
-              {errors.mensaje?.type === "required" && <p className="error">❎ El mensaje es obligatorio</p>}
+              <textarea type="text" className="form-control shadow-none" id="mensaje" rows={2} autoComplete="off" {...register("mensaje" )}/>
             </div>
             <button type="submit" className="custom-button">Enviar</button>
           </form>
