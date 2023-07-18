@@ -14,12 +14,12 @@ function Form2() {
     axios.post('https://cors-anywhere.herokuapp.com/https://back-app-production.up.railway.app/api/registrapersona', data)
       .then((response) => {
         console.log(response);
-        alert('Registro exitoso');
+        alert('✅ ¡Envío Exitoso!');
         reset();
       })
       .catch((error) => {
         console.log(error);
-        alert('Ocurrió un error al enviar el formulario');
+        alert(' ⛔ Ocurrió un error al enviar el formulario ⛔');
       });
   };
 
@@ -54,7 +54,7 @@ function Form2() {
               <textarea type="text" className="form-control shadow-none" id="mensaje" rows={2} autoComplete="off" {...register("mensaje", { required: true} )}/>
               {errors.mensaje?.type === "required" && <p className="error">❎ El mensaje es obligatorio</p>}
             </div>
-            <button type="submit" className="custom-button">Registro</button>
+            <button type="submit" className="custom-button">Enviar</button>
           </form>
         </div>
         <div className="col-md-6  d-flex align-items-center justify-content-center p-5">
