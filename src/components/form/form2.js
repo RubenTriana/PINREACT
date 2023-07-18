@@ -33,7 +33,7 @@ function Form2() {
           <form className="w-100" onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-2">
               <label htmlFor="nombre" className="form-label">Nombre</label>
-              <input type="text" className=" form-control shadow-none  " id="nombre" autoComplete="off" {...register("nombre", { required: true, pattern: /^[A-Za-z]+$/i })} />
+              <input type="text" className=" form-control shadow-none  " id="nombre" autoComplete="off" {...register("nombre", { required: true})} />
               {errors.nombre && <p className="error">❎ El nombre es obligatorio</p>}
               {errors.nombre?.type === "pattern" && <p className="error">❎ No se permite números en el nombre</p>}
             </div>
