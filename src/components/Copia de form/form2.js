@@ -40,8 +40,6 @@ export const Form2 = () => {
         console.log(error);
       });
   };
-
-
   return (
     <div name='contact' className="container-fluid contentForm pt-5 mt-5 pb-5 ">
       <div className="row py-5 my-5">
