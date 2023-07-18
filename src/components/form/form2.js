@@ -19,7 +19,10 @@ function Form2() {
       })
       .catch((error) => {
         console.log(error);
-        alert(' ⛔ Ocurrió un error al enviar el formulario ⛔');
+        if (error.response.data.message === "El correo electrónico ya está en uso") {
+          alert(' ⛔ El correo ya está en uso, intenta con otro correo');
+        } else
+          alert(' ⛔ Ocurrió un error al enviar el formulario ');
       });
   };
 
@@ -33,7 +36,7 @@ function Form2() {
           <form className="w-100" onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-2">
               <label htmlFor="nombre" className="form-label">Nombre</label>
-              <input type="text" className=" form-control shadow-none  " id="nombre" autoComplete="off" {...register("nombre", { required: true})} />
+              <input type="text" className=" form-control shadow-none  " id="nombre" autoComplete="off" {...register("nombre", { required: true })} />
               {errors.nombre && <p className="error">❎ El nombre es obligatorio</p>}
               {errors.nombre?.type === "pattern" && <p className="error">❎ No se permite números en el nombre</p>}
             </div>
@@ -51,7 +54,7 @@ function Form2() {
             </div>
             <div className="mb-2">
               <label htmlFor="mensaje" className="form-label">Comentario</label>
-              <textarea type="text" className="form-control shadow-none" id="mensaje" rows={2} autoComplete="off" {...register("mensaje" )}/>
+              <textarea type="text" className="form-control shadow-none" id="mensaje" rows={2} autoComplete="off" {...register("mensaje")} />
             </div>
             <button type="submit" className="custom-button">Enviar</button>
           </form>
